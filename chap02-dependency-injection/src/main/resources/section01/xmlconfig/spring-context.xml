@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- ioc 제어의 역전 -->
+    <bean id="member" class="com.ohgiraffers.common.MemberDTO">
+        <property name="seq" value="1"/>
+        <property name="name" value="홍길동"/>
+        <property name="phone" value="010-2222-3333"/>
+        <property name="email" value="hong@gmail.com"/>
+        <property name="personalAccount" ref="account"/>
+    </bean>
+
+    <!--  DI 의존성 주입  -->
+    <bean id="account" class="com.ohgiraffers.common.PersonalAccount">
+        <constructor-arg index="0" value="20"/>
+        <constructor-arg index="1" value="110-223-423321"/>
+    </bean>
+</beans>
