@@ -25,7 +25,7 @@ public class PersonalAccount implements Account {
 
     @Override
     public String getBalance() {
-        return this.accNo + "계좌의 현재 잔액" + this.balance + "원 입니다.";
+        return this.accNo + " 계좌의 현재 잔액 " + this.balance + "원 입니다.";
     }
 
     @Override
